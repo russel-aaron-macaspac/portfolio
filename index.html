@@ -3,46 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Russel Macaspac - Portfolio</title>
+    <title>Russel Macaspac | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav>
+            <h1>Russel Aaron Macaspac</h1>
             <ul>
-                <li><a href="#homepage">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#TechStack">Tech Stack</a></li>
+                <li><a href="#tech">More</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <h1>Russel Aaron Macaspac</h1>
     </header>
-    
-    <section id="homepage">
-        <img src="Profilephoto.jpg" alt="Russel Macaspac">
-    </section>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Future Web Developer with a strong foundation in HTML, CSS, JavaScript, and a passion for learning new technologies. 
-        </p>
-        <p>
-            Aspiring IT professional with a passion for web development and a commitment to continuous learning.
-        </p>
+
+    <section id="about" class="section">
+        <div class="profile">
+            <img src="Profilephoto.jpg" alt="Russel's Photo">
+            <p>Future Web Developer with strong skills in HTML, CSS, JavaScript, and a passion for learning new technologies.</p>
+        </div>
     </section>
 
-    <section id="TechStack">
+    <section id="tech" class="section">
+        <h2>Programming Language & Certifications</h2>
+        <div class="tech-icons">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-react"></i>
+        </div>
+    </section>
 
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>A modern portfolio showcasing my skills and projects.</p>
+            <a href="https://github.com/Russel-Aaron-Macaspac" target="_blank">View on GitHub</a>
+        </div>
     </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: russelaaron2004@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/russel-aaron-macaspac" style="color: #00bcd4;">Russel-Aaron-Macaspac</a></p>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
-     
+
+    <footer>
+        <p>&copy; 2025 Russel Macaspac | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
