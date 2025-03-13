@@ -248,7 +248,7 @@ h3 {
     text-align: center;
     margin-top: 30px;
     font-size: 24px;
-    color: #fff; /* Adjust text color */
+    color: #fff; 
 }
 
 /* ABOUT SECTION */
@@ -259,7 +259,7 @@ h3 {
     flex-direction: column;
     text-align: center;
     padding: 80px 20px;
-    background-color: #111; /* Darker background */
+    background-color: #111; 
     color: white;
 }
 
