@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Russel Macaspac</title>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- FontAwesome for icons -->
+
+    <!-- FontAwesome for icons (Replace YOUR_KIT_CODE with your actual kit) -->
     <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
 
     <script defer src="script.js"></script>
@@ -19,10 +19,12 @@
     <header class="bg-gray-800 py-4 shadow-md">
         <nav class="container mx-auto flex justify-between items-center px-6">
             <h1 class="text-lg font-semibold">Russel Macaspac</h1>
+
             <!-- Mobile Menu Button -->
-            <div class="md:hidden menu-toggle cursor-pointer text-2xl">
+            <button id="menu-btn" class="md:hidden text-2xl">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
+
             <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-6">
                 <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
@@ -31,6 +33,7 @@
                 <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
             </ul>
         </nav>
+
         <!-- Mobile Menu -->
         <ul id="mobile-menu" class="hidden flex flex-col space-y-4 bg-gray-800 text-center p-4 md:hidden">
             <li><a href="index.html" class="block py-2 hover:text-blue-400">Home</a></li>
@@ -43,7 +46,8 @@
     <!-- About Section -->
     <section class="flex flex-col items-center justify-center text-center min-h-screen px-6">
         <img src="Profilephoto.jpg" alt="Russel Aaron Macaspac" 
-            class="w-32 h-32 sm:w-48 sm:h-48 max-w-full rounded-full shadow-lg border-4 border-blue-500 object-cover transition-transform hover:scale-105">
+            class="w-32 h-32 sm:w-48 sm:h-48 max-w-full rounded-full shadow-lg border-4 border-blue-500 object-cover transition-transform hover:scale-105"
+            loading="lazy">
         <h1 class="text-3xl sm:text-4xl font-bold mt-4">Russel Aaron Macaspac</h1>
 
         <p class="text-base sm:text-lg mt-4 max-w-2xl text-gray-300 leading-relaxed">
@@ -58,6 +62,16 @@
         <a href="resume.pdf" download class="mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-md transition-all">
             Download Resume
         </a>
+
+        <!-- Social Media Links -->
+        <div class="mt-4 space-x-4">
+            <a href="https://github.com/yourgithub" target="_blank" class="text-gray-400 hover:text-white">
+                <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourlinkedin" target="_blank" class="text-gray-400 hover:text-white">
+                <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -67,11 +81,20 @@
 
     <!-- Mobile Menu Toggle Script -->
     <script>
-        const menuBtn = document.querySelector('.menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+
+            // Close menu when clicking a link
+            document.querySelectorAll("#mobile-menu a").forEach(link => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.add("hidden");
+                });
+            });
         });
     </script>
 
