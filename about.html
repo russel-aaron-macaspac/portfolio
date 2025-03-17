@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Russel Aaron Macaspac - An aspiring IT professional passionate about web development and software engineering.">
+    <meta name="keywords" content="Russel Macaspac, IT professional, web developer, software engineer">
+    <meta name="author" content="Russel Macaspac">
     <title>About | Russel Macaspac</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-gray-900 text-white">
 
@@ -15,12 +22,10 @@
     <header class="bg-gray-800 py-4 shadow-md">
         <nav class="container mx-auto flex justify-between items-center px-6">
             <h1 class="text-lg font-semibold">Russel Macaspac</h1>
-
             <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-2xl">
+            <div class="md:hidden menu-toggle cursor-pointer text-2xl">
                 <i class="fas fa-bars"></i>
-            </button>
-
+            </div>
             <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-6">
                 <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
@@ -29,9 +34,8 @@
                 <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
             </ul>
         </nav>
-
         <!-- Mobile Menu -->
-        <ul id="mobile-menu" class="absolute top-16 left-0 w-full hidden bg-gray-800 text-center p-4 md:hidden transition-all duration-300 ease-in-out">
+        <ul id="mobile-menu" class="hidden flex flex-col space-y-4 bg-gray-800 text-center p-4 md:hidden">
             <li><a href="index.html" class="block py-2 hover:text-blue-400">Home</a></li>
             <li><a href="about.html" class="block py-2 hover:text-blue-400">About</a></li>
             <li><a href="more.html" class="block py-2 hover:text-blue-400">More</a></li>
@@ -55,8 +59,8 @@
         </p>
 
         <!-- Download Resume Button -->
-        <a href="resume.pdf" download class="mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-md transition-all">
-            Download Resume
+        <a href="resume.pdf" target="_blank" aria-label="Download Resume" class="mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-md transition-all">
+            View Resume
         </a>
     </section>
 
@@ -67,13 +71,12 @@
 
     <!-- Mobile Menu Script -->
     <script>
-        const menuToggle = document.querySelector(".menu-btn");
+        const menuToggle = document.querySelector(".menu-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
 
         menuToggle.addEventListener("click", () => {
             mobileMenu.classList.toggle("hidden");
         });
     </script>
-
 </body>
 </html>
