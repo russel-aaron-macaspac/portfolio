@@ -13,28 +13,28 @@
     <header class="bg-gray-800 p-4">
         <nav class="max-w-6xl mx-auto flex justify-between items-center">
             <h1 class="text-xl font-bold text-white">Russel Macaspac</h1>
-            <ul class="flex space-x-6 text-lg">
-                <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
-                <li><a href="more.html" class="hover:text-blue-400">More</a></li>
-                <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
-                <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="text-white text-2xl md:hidden focus:outline-none">&#9776;</button>
+            <ul id="menu" class="hidden md:flex space-x-6 text-lg absolute md:relative top-16 left-0 w-full md:w-auto md:top-auto md:left-auto bg-gray-800 md:bg-transparent p-4 md:p-0">
+                <li><a href="index.html" class="block py-2 hover:text-blue-400">Home</a></li>
+                <li><a href="more.html" class="block py-2 hover:text-blue-400">More</a></li>
+                <li><a href="projects.html" class="block py-2 hover:text-blue-400">Projects</a></li>
+                <li><a href="contact.html" class="block py-2 hover:text-blue-400">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- About Section -->
     <section class="flex flex-col items-center justify-center text-center min-h-screen px-6">
-        <img src="Profilephoto.jpg" alt="Russel Aaron Macaspac" class="w-48 h-48 rounded-full shadow-lg border-4 border-blue-500 object-cover transition-transform hover:scale-105">
-        <h1 class="text-4xl font-bold mt-4">Russel Aaron Macaspac</h1>
+        <img src="Profilephoto.jpg" alt="Russel Aaron Macaspac" class="w-32 h-32 sm:w-48 sm:h-48 rounded-full shadow-lg border-4 border-blue-500 object-cover transition-transform hover:scale-105">
+        <h1 class="text-3xl sm:text-4xl font-bold mt-4">Russel Aaron Macaspac</h1>
 
-        <!-- First Paragraph: About Yourself -->
-        <p class="text-lg mt-4 max-w-2xl text-gray-300">
-            I am an aspiring IT professional with a strong passion for web development and software engineering. Ever since I started learning how to code, I have been fascinated by the power of technology to solve real-world problems. I enjoy working on projects that challenge my skills and push me to learn new technologies. Whether it's front-end design or back-end logic, I love building efficient and user-friendly applications. In my free time, I explore new programming frameworks, contribute to open-source projects, and refine my problem-solving abilities.
+        <p class="text-base sm:text-lg mt-4 max-w-2xl text-gray-300 leading-relaxed">
+            I am an aspiring IT professional with a strong passion for web development and software engineering. Ever since I started learning how to code, I have been fascinated by the power of technology to solve real-world problems.
         </p>
 
-        <!-- Second Paragraph: Professional Aspirations -->
-        <p class="text-lg mt-4 max-w-2xl text-gray-300">
-            My ultimate goal is to become a skilled full-stack web developer and eventually specialize in mobile application development. I aim to work on innovative projects that enhance user experiences and make a meaningful impact in the tech industry. In the future, I hope to collaborate with industry professionals, contribute to major projects, and continuously expand my knowledge in software development.
+        <p class="text-base sm:text-lg mt-4 max-w-2xl text-gray-300 leading-relaxed">
+            My ultimate goal is to become a skilled full-stack web developer and eventually specialize in mobile application development. I aim to work on innovative projects that enhance user experiences.
         </p>
 
         <!-- Download Resume Button -->
@@ -47,6 +47,16 @@
     <footer class="text-center p-4 bg-gray-800">
         <p>&copy; 2025 Russel Macaspac | All Rights Reserved</p>
     </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 </html>
