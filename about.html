@@ -8,11 +8,6 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- FontAwesome for icons -->
-    <script src="https://kit.fontawesome.com/YOUR_ACTUAL_KIT_CODE.js" crossorigin="anonymous"></script>
-
-    <script defer src="script.js"></script>
 </head>
 <body class="bg-gray-900 text-white">
 
@@ -70,22 +65,13 @@
         <p>&copy; 2025 Russel Macaspac | All Rights Reserved</p>
     </footer>
 
-    <!-- Mobile Menu Toggle Script -->
+    <!-- Mobile Menu Script -->
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const menuBtn = document.getElementById("menu-btn");
-            const mobileMenu = document.getElementById("mobile-menu");
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-            menuBtn.addEventListener("click", () => {
-                mobileMenu.classList.toggle("hidden");
-            });
-
-            // Close menu when clicking a link
-            document.querySelectorAll("#mobile-menu a").forEach(link => {
-                link.addEventListener("click", () => {
-                    mobileMenu.classList.add("hidden");
-                });
-            });
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
         });
     </script>
 
