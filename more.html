@@ -6,6 +6,7 @@
     <title>More | Russel Macaspac</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
@@ -13,11 +14,9 @@
     <header class="bg-gray-800 py-4 shadow-md">
         <nav class="container mx-auto flex justify-between items-center px-6">
             <h1 class="text-xl font-bold text-white">Russel Macaspac</h1>
-            <!-- Mobile Menu Button -->
             <div class="md:hidden menu-toggle cursor-pointer text-2xl">
                 <i class="fas fa-bars"></i>
             </div>
-            <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-6">
                 <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
                 <li><a href="about.html" class="hover:text-blue-400">About</a></li>
@@ -26,57 +25,115 @@
                 <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
             </ul>
         </nav>
-        <!-- Mobile Menu -->
-        <ul id="mobile-menu" class="hidden flex flex-col space-y-4 bg-gray-800 text-center p-4 md:hidden">
-            <li><a href="index.html" class="block py-2 hover:text-blue-400">Home</a></li>
-            <li><a href="about.html" class="block py-2 hover:text-blue-400">About</a></li>
-            <li><a href="more.html" class="block py-2 text-blue-400 font-semibold">More</a></li>
-            <li><a href="projects.html" class="block py-2 hover:text-blue-400">Projects</a></li>
-            <li><a href="contact.html" class="block py-2 hover:text-blue-400">Contact</a></li>
-        </ul>
     </header>
 
     <!-- Main Content -->
-    <section class="container mx-auto mt-12 px-6 text-center">
-
-        <!-- Programming Languages Section -->
-        <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+    <section class="container mx-auto mt-16 px-8 text-center space-y-12">
+        <div class="bg-gray-800 p-10 rounded-lg shadow-lg animated-section">
             <h2 class="text-3xl font-bold text-blue-400">Programming Languages</h2>
             <p class="text-gray-300 mt-3">Here are some of the technologies I work with:</p>
             <div class="grid grid-cols-3 md:flex md:justify-center md:space-x-8 text-5xl md:text-6xl mt-6 gap-4">
-                <i class="fab fa-html5 text-orange-500"></i>
-                <i class="fab fa-css3-alt text-blue-500"></i>
-                <i class="fab fa-js text-yellow-400"></i>
-                <i class="fab fa-react text-cyan-400"></i>
-                <i class="fab fa-java text-red-500"></i>
-                <i class="fas fa-database text-green-400"></i>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fab fa-html5 text-orange-500"></i>
+                    <p class="text-sm mt-2">HTML</p>
+                </div>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fab fa-css3-alt text-blue-500"></i>
+                    <p class="text-sm mt-2">CSS</p>
+                </div>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fab fa-js text-yellow-400"></i>
+                    <p class="text-sm mt-2">JavaScript</p>
+                </div>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fas fa-code text-blue-300"></i>
+                    <p class="text-sm mt-2">C</p>
+                </div>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fab fa-java text-red-500"></i>
+                    <p class="text-sm mt-2">Java</p>
+                </div>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fas fa-database text-green-400"></i>
+                    <p class="text-sm mt-2">Database</p>
+                </div>
             </div>
         </div>
 
-        <!-- Certifications Section -->
-        <div class="bg-gray-800 p-8 rounded-lg shadow-lg mt-10">
+        <div class="bg-gray-800 p-10 rounded-lg shadow-lg animated-section">
+            <h3 class="text-3xl font-bold text-blue-400">Development Tools</h3>
+            <p class="text-gray-300 mt-3">Tools that I have learned so far:</p>
+            <div class="grid grid-cols-3 md:flex md:justify-center md:space-x-8 text-5xl md:text-6xl mt-6 gap-4">
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fab fa-github text-gray-300"></i>
+                    <p class="text-sm mt-2">GitHub</p>
+                </div>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fas fa-laptop-code text-blue-400"></i>
+                    <p class="text-sm mt-2">VS Code</p>
+                </div>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fas fa-mobile-alt text-green-400"></i>
+                    <p class="text-sm mt-2">Android Studio</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-800 p-10 rounded-lg shadow-lg animated-section">
             <h3 class="text-3xl font-bold text-blue-400">Certifications</h3>
             <p class="text-gray-300 mt-3">Certifications I have earned:</p>
             <div class="mt-6 flex justify-center">
-                <img src="certificate1.png" alt="Certification 1" class="w-full max-w-xs sm:max-w-md rounded-lg shadow-lg border border-gray-700">
+                <img src="certificate1.png" alt="Certification 1" class="w-full max-w-xs sm:max-w-md rounded-lg shadow-md border border-gray-700 cursor-pointer" onclick="expandImage(this)">
             </div>
         </div>
-
     </section>
 
     <!-- Footer -->
-    <footer class="mt-12 bg-gray-800 py-4 text-center text-gray-400">
+    <footer class="mt-16 bg-gray-800 py-4 text-center text-gray-400">
         <p>&copy; 2025 Russel Macaspac | All Rights Reserved</p>
     </footer>
 
-    <!-- Mobile Menu Script -->
+    <!-- Scripts -->
     <script>
+        anime({
+            targets: '.animated-section',
+            opacity: [0, 1],
+            translateY: [20, 0],
+            delay: anime.stagger(200),
+            duration: 800,
+            easing: 'easeOutQuad'
+        });
+
+        anime({
+            targets: '.icon-animate i',
+            scale: [0.8, 1],
+            opacity: [0, 1],
+            delay: anime.stagger(100),
+            duration: 500,
+            easing: 'easeOutQuad'
+        });
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
         const menuToggle = document.querySelector(".menu-toggle");
-        const mobileMenu = document.getElementById("mobile-menu");
+        const navLinks = document.querySelector("nav ul");
 
         menuToggle.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
+            navLinks.classList.toggle("hidden");
         });
+    });
+    </script>
+
+    <script>
+    function expandImage(img) {
+        const expandedImg = document.createElement("div");
+        expandedImg.innerHTML = `<div class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+            <img src="${img.src}" class="max-w-full max-h-full rounded-lg shadow-lg">
+            <button onclick="this.parentElement.remove()" class="absolute top-5 right-5 text-white text-3xl">&times;</button>
+        </div>`;
+        document.body.appendChild(expandedImg);
+    }
     </script>
 
 </body>
