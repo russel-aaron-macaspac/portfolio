@@ -25,6 +25,15 @@
                 <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
             </ul>
         </nav>
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden flex flex-col space-y-4 bg-gray-800 text-center p-4 md:hidden">
+            <li><a href="index.html" class="block py-2 hover:text-blue-400">Home</a></li>
+            <li><a href="about.html" class="block py-2 hover:text-blue-400">About</a></li>
+            <li><a href="more.html" class="block py-2 hover:text-blue-400">More</a></li>
+            <li><a href="projects.html" class="block py-2 hover:text-blue-400">Projects</a></li>
+            <li><a href="contact.html" class="block py-2 hover:text-blue-400">Contact</a></li>
+        </ul>
+
     </header>
 
     <!-- Main Content -->
@@ -95,46 +104,54 @@
 
     <!-- Scripts -->
     <script>
-        anime({
-            targets: '.animated-section',
-            opacity: [0, 1],
-            translateY: [20, 0],
-            delay: anime.stagger(200),
-            duration: 800,
-            easing: 'easeOutQuad'
+        document.addEventListener("DOMContentLoaded", function () {
+            // Animate Sections
+            if (typeof anime !== "undefined") {
+                anime({
+                    targets: ".animated-section",
+                    opacity: [0, 1],
+                    translateY: [20, 0],
+                    delay: anime.stagger(200),
+                    duration: 800,
+                    easing: "easeOutQuad",
+                });
+        
+                anime({
+                    targets: ".icon-animate i",
+                    scale: [0.8, 1],
+                    opacity: [0, 1],
+                    delay: anime.stagger(100),
+                    duration: 500,
+                    easing: "easeOutQuad",
+                });
+            }
+        
+            // Mobile Menu Toggle
+            const menuToggle = document.querySelector(".menu-toggle");
+            const mobileMenu = document.getElementById("mobile-menu");
+        
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener("click", () => {
+                    mobileMenu.classList.toggle("hidden");
+                });
+            }
         });
-
-        anime({
-            targets: '.icon-animate i',
-            scale: [0.8, 1],
-            opacity: [0, 1],
-            delay: anime.stagger(100),
-            duration: 500,
-            easing: 'easeOutQuad'
-        });
-    </script>
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector("nav ul");
-
-        menuToggle.addEventListener("click", () => {
-            navLinks.classList.toggle("hidden");
-        });
-    });
-    </script>
-
-    <script>
-    function expandImage(img) {
-        const expandedImg = document.createElement("div");
-        expandedImg.innerHTML = `<div class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-            <img src="${img.src}" class="max-w-full max-h-full rounded-lg shadow-lg">
-            <button onclick="this.parentElement.remove()" class="absolute top-5 right-5 text-white text-3xl">&times;</button>
-        </div>`;
-        document.body.appendChild(expandedImg);
-    }
-    </script>
+        
+        // Expand Image Function
+        function expandImage(img) {
+            const expandedImg = document.createElement("div");
+            expandedImg.innerHTML = `
+                <div class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+                    <div class="relative">
+                        <img src="${img.src}" class="max-w-full max-h-full rounded-lg shadow-lg">
+                        <button onclick="this.parentElement.parentElement.remove()" 
+                            class="absolute top-2 right-2 text-white text-3xl">&times;
+                        </button>
+                    </div>
+                </div>`;
+            document.body.appendChild(expandedImg);
+        }
+        </script>
 
 </body>
 </html>

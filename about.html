@@ -8,20 +8,25 @@
     <meta name="author" content="Russel Macaspac">
     <title>About | Russel Macaspac</title>
 
-    <!-- Tailwind CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- FontAwesome for Icons -->
     <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+    </style>
 </head>
 <body class="bg-gray-900 text-white">
 
     <!-- Navbar -->
     <header class="bg-gray-800 py-4 shadow-md">
         <nav class="container mx-auto flex justify-between items-center px-6">
-            <h1 class="text-lg font-semibold">Russel Macaspac</h1>
+            <h1 class="text-lg font-semibold font-poppins">Russel Macaspac</h1>
             <!-- Mobile Menu Button -->
             <div class="md:hidden menu-toggle cursor-pointer text-2xl">
                 <i class="fas fa-bars"></i>
@@ -48,18 +53,18 @@
         <img src="Profilephoto.jpg" alt="Russel Aaron Macaspac" 
             class="w-32 h-32 sm:w-48 sm:h-48 max-w-full rounded-full shadow-lg border-4 border-blue-500 object-cover transition-transform hover:scale-105"
             loading="lazy">
-        <h1 class="text-3xl sm:text-4xl font-bold mt-4">Russel Aaron Macaspac</h1>
+        <h1 class="text-3xl sm:text-4xl font-bold mt-4 font-poppins">Russel Aaron Macaspac</h1>
 
-        <p class="text-base sm:text-lg mt-4 max-w-2xl text-gray-300 leading-relaxed">
+        <p class="text-lg sm:text-xl mt-4 max-w-2xl text-gray-300 leading-relaxed font-roboto">
             I am an aspiring IT professional with a strong passion for web development and software engineering. Ever since I started learning how to code, I have been fascinated by the power of technology to solve real-world problems.
         </p>
 
-        <p class="text-base sm:text-lg mt-4 max-w-2xl text-gray-300 leading-relaxed">
+        <p class="text-lg sm:text-xl mt-4 max-w-2xl text-gray-300 leading-relaxed font-roboto">
             My ultimate goal is to become a skilled full-stack web developer and eventually specialize in mobile application development. I aim to work on innovative projects that enhance user experiences.
         </p>
 
         <!-- Download Resume Button -->
-        <a href="resume.pdf" target="_blank" aria-label="Download Resume" class="mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-md transition-all">
+        <a href="resume.pdf" target="_blank" aria-label="Download Resume" class="mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition-all duration-300">
             View Resume
         </a>
     </section>
