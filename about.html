@@ -26,7 +26,7 @@
     <!-- Navbar -->
     <header class="bg-gray-800 py-4 shadow-md">
         <nav class="container mx-auto flex justify-between items-center px-6">
-            <h1 class="text-lg font-semibold font-poppins">Russel Macaspac</h1>
+            <h1 class="text-lg font-semibold">Russel Macaspac</h1>
             <div class="md:hidden menu-toggle cursor-pointer text-2xl">
                 <i class="fas fa-bars"></i>
             </div>
@@ -35,13 +35,14 @@
                 <li><a href="about.html" class="hover:text-blue-400">About</a></li>
                 <li><a href="more.html" class="hover:text-blue-400">More</a></li>
                 <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+                
+                
             </ul>
         </nav>
         <ul id="mobile-menu" class="hidden flex flex-col space-y-4 bg-gray-800 text-center p-4 md:hidden">
             <li><a href="index.html" class="block py-2 hover:text-blue-400">Home</a></li>
             <li><a href="about.html" class="block py-2 hover:text-blue-400">About</a></li>
             <li><a href="more.html" class="block py-2 hover:text-blue-400">More</a></li>
-            <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
             <li><a href="contact.html" class="block py-2 hover:text-blue-400">Contact</a></li>
             
         </ul>
@@ -90,14 +91,12 @@
                 opacity: [0, 1],
                 translateY: [-20, 0]
             }, "-=500");
-
-            const menuToggle = document.querySelector(".menu-toggle");
+    
+        const menuToggle = document.querySelector(".menu-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
-
+    
         menuToggle.addEventListener("click", () => {
             mobileMenu.classList.toggle("hidden");
-                });
-            
+        });
     </script>
-</body>
-</html>
+    
