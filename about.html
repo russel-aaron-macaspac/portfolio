@@ -36,7 +36,6 @@
                 <li><a href="more.html" class="hover:text-blue-400">More</a></li>
                 <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
                 
-                
             </ul>
         </nav>
         <ul id="mobile-menu" class="hidden flex flex-col space-y-4 bg-gray-800 text-center p-4 md:hidden">
@@ -92,14 +91,12 @@
                 translateY: [-20, 0]
             }, "-=500");
     
-            document.addEventListener("DOMContentLoaded", () => {
         const menuToggle = document.querySelector(".menu-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
 
         menuToggle.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden"); 
-            mobileMenu.classList.toggle("block"); // Ensures it displays properly
-        });
-    });
+            mobileMenu.classList.toggle("hidden");
+                });
+            
     </script>
     
