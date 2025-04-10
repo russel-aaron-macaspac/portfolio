@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Russel Macaspac</title>
     <link rel="icon" type="image/png" href="logoo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -75,12 +77,34 @@
 
     <!-- Mobile Menu Toggle -->
     <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+       const menuToggle = document.getElementById("menu-btn"); // Corrected selector
+    const mobileMenu = document.getElementById("mobile-menu");
+    let isMenuOpen = false;
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+    menuToggle.addEventListener("click", () => {
+        if (!isMenuOpen) {
+            mobileMenu.classList.remove("hidden");
+            anime({
+                targets: mobileMenu,
+                opacity: [0, 1],
+                translateY: [-20, 0],
+                duration: 400,
+                easing: 'easeOutQuad'
+            });
+        } else {
+            anime({
+                targets: mobileMenu,
+                opacity: [1, 0],
+                translateY: [0, -20],
+                duration: 300,
+                easing: 'easeInQuad',
+                complete: () => {
+                    mobileMenu.classList.add("hidden");
+                }
+            });
+        }
+        isMenuOpen = !isMenuOpen;
+    });
     </script>
 
 </body>

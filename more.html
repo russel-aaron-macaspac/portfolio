@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
@@ -26,20 +25,15 @@
                 <li><a href="more.html" class="hover:text-blue-400">Tech Stack</a></li>
                 <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
                 <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
-                
-                
             </ul>
         </nav>
         <ul id="mobile-menu" class="hidden flex flex-col space-y-4 bg-gray-800 text-center p-4 md:hidden">
             <li><a href="index.html" class="block py-2 hover:text-blue-400">Home</a></li>
             <li><a href="about.html" class="block py-2 hover:text-blue-400">About</a></li>
             <li><a href="more.html" class="block py-2 hover:text-blue-400">Tech Stack</a></li>
-            <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+            <li><a href="projects.html" class="block py-2 hover:text-blue-400">Projects</a></li>
             <li><a href="contact.html" class="block py-2 hover:text-blue-400">Contact</a></li>
-            
         </ul>
-    </header>
-
     </header>
 
     <!-- Main Content -->
@@ -48,30 +42,30 @@
             <h2 class="text-3xl font-bold text-blue-400">Programming Languages</h2>
             <p class="text-gray-300 mt-3">Here are some of the technologies I work with:</p>
             <div class="grid grid-cols-3 md:flex md:justify-center md:space-x-8 text-6xl mt-6 gap-4">
-            <div class="flex flex-col items-center icon-animate">
-                <i class="fab fa-html5 text-orange-500"></i>
-                <p class="text-base mt-2">HTML</p>
-            </div>
-            <div class="flex flex-col items-center icon-animate">
-                <i class="fab fa-css3-alt text-blue-500"></i>
-                <p class="text-base mt-2">CSS</p>
-            </div>
-            <div class="flex flex-col items-center icon-animate">
-                <i class="fab fa-js text-yellow-400"></i>
-                <p class="text-base mt-2">JavaScript</p>
-            </div>
-            <div class="flex flex-col items-center icon-animate">
-                <i class="devicon-c-plain colored"></i>
-                <p class="text-base mt-2">C</p>
-            </div>
-            <div class="flex flex-col items-center icon-animate">
-                <i class="fab fa-java text-red-500"></i>
-                <p class="text-base mt-2">Java</p>
-            </div>
-            <div class="flex flex-col items-center icon-animate">
-                <i class="fas fa-database text-green-400"></i>
-                <p class="text-base mt-2">SQL</p>
-            </div>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fab fa-html5 text-orange-500"></i>
+                    <p class="text-base mt-2">HTML</p>
+                </div>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fab fa-css3-alt text-blue-500"></i>
+                    <p class="text-base mt-2">CSS</p>
+                </div>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fab fa-js text-yellow-400"></i>
+                    <p class="text-base mt-2">JavaScript</p>
+                </div>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="devicon-c-plain colored"></i>
+                    <p class="text-base mt-2">C</p>
+                </div>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fab fa-java text-red-500"></i>
+                    <p class="text-base mt-2">Java</p>
+                </div>
+                <div class="flex flex-col items-center icon-animate">
+                    <i class="fas fa-database text-green-400"></i>
+                    <p class="text-base mt-2">SQL</p>
+                </div>
             </div>
         </div>
 
@@ -98,11 +92,10 @@
             <h3 class="text-3xl font-bold text-blue-400">Certifications</h3>
             <p class="text-gray-300 mt-3">Certifications I have earned:</p>
             <div class="mt-6 flex justify-center">
-                <img src="certificate1.png" alt="Certification 1" class="w-full max-w-xs sm:max-w-md rounded-lg shadow-md border border-gray-700 cursor-pointer" onclick="expandImage(this)">
+                <img src="certificate1.png" alt="Certification 1" class="w-full max-w-xs sm:max-w-md rounded-lg shadow-md border border-gray-700 cursor-pointer">
             </div>
         </div>
     </section>
-
 
     <!-- Scripts -->
     <script>
@@ -117,7 +110,7 @@
                     duration: 800,
                     easing: "easeOutQuad",
                 });
-        
+
                 anime({
                     targets: ".icon-animate i",
                     scale: [0.8, 1],
@@ -127,32 +120,55 @@
                     easing: "easeOutQuad",
                 });
             }
-        
+
             // Mobile Menu Toggle
             const menuToggle = document.querySelector(".menu-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
+        let isMenuOpen = false;
 
-        menuToggle.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-                });
-            }
-        );
-        
-        // Expand Image Function
-        function expandImage(img) {
-            const expandedImg = document.createElement("div");
-            expandedImg.innerHTML = `
-                <div class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-                    <div class="relative">
-                        <img src="${img.src}" class="max-w-full max-h-full rounded-lg shadow-lg">
-                        <button onclick="this.parentElement.parentElement.remove()" 
-                            class="absolute top-2 right-2 text-white text-3xl">&times;
-                        </button>
-                    </div>
-                </div>`;
-            document.body.appendChild(expandedImg);
+    menuToggle.addEventListener("click", () => {
+        if (!isMenuOpen) {
+            mobileMenu.classList.remove("hidden");
+            anime({
+                targets: mobileMenu,
+                opacity: [0, 1],
+                translateY: [-20, 0],
+                duration: 400,
+                easing: 'easeOutQuad'
+            });
+        } else {
+            anime({
+                targets: mobileMenu,
+                opacity: [1, 0],
+                translateY: [0, -20],
+                duration: 300,
+                easing: 'easeInQuad',
+                complete: () => {
+                    mobileMenu.classList.add("hidden");
+                }
+            });
         }
-        </script>
+        isMenuOpen = !isMenuOpen;
+    });
+
+            // Expand Image Function
+            document.querySelectorAll("img").forEach((img) => {
+                img.addEventListener("click", function () {
+                    const expandedImg = document.createElement("div");
+                    expandedImg.innerHTML = `
+                        <div class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+                            <div class="relative">
+                                <img src="${this.src}" class="max-w-full max-h-full rounded-lg shadow-lg">
+                                <button onclick="this.parentElement.parentElement.remove()" 
+                                    class="absolute top-2 right-2 text-white text-3xl">&times;
+                                </button>
+                            </div>
+                        </div>`;
+                    document.body.appendChild(expandedImg);
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

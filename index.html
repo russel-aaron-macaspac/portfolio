@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Russel Macaspac showcasing projects, skills, and contact information.">
     <title>Home | Russel Macaspac</title>
     <link rel="icon" type="image/png" href="logoo.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" preload="true">
     <script defer src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" defer></script>
     <style>
         .typing::after {
             content: "|";
@@ -19,6 +20,10 @@
 
         @keyframes blink {
             50% { opacity: 0; }
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -45,27 +50,53 @@
         </ul>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero flex flex-col items-center justify-center text-center min-h-screen px-6 bg-gradient-to-r from-green-500 to-blue-500">
-        <img id="profile-picture" src="Profilephoto.jpg" alt="Russel Aaron Macaspac" 
-            class="w-32 h-32 sm:w-48 sm:h-48 max-w-full rounded-full shadow-lg border-4 border-white object-cover mb-6">
-        <h1 id="hero-text" class="text-4xl md:text-5xl font-bold mb-4">
-            <span id="typing-text" class="typing"></span>
-        </h1>
-        <p class="text-lg md:text-xl mb-6">Check out my projects and skills!</p>
-        <a href="projects.html" class="bg-white text-blue-600 px-6 py-3 rounded-lg shadow-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition">
-            See My Work
-        </a>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero flex flex-col items-center justify-center text-center min-h-screen px-6 bg-gradient-to-r from-green-500 to-blue-500">
+            <img id="profile-picture" src="Profilephoto.jpg" alt="Russel Aaron Macaspac's profile picture" 
+                class="w-32 h-32 sm:w-48 sm:h-48 max-w-full rounded-full shadow-lg border-4 border-white object-cover mb-6">
+            <h1 id="hero-text" class="text-4xl md:text-5xl font-bold mb-4">
+                <span id="typing-text" class="typing"></span>
+            </h1>
+            <p class="text-lg md:text-xl mb-6">Check out my projects and skills!</p>
+            <a href="projects.html" class="bg-white text-blue-600 px-6 py-3 rounded-lg shadow-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition">
+                See My Work
+            </a>
+        </section>
+    </main>
 
     <script>
         // Mobile Menu Toggle
         const menuToggle = document.querySelector(".menu-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
+        let isMenuOpen = false;
 
-        menuToggle.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-        });
+    menuToggle.addEventListener("click", () => {
+        if (!isMenuOpen) {
+            mobileMenu.classList.remove("hidden");
+            anime({
+                targets: mobileMenu,
+                opacity: [0, 1],
+                translateY: [-20, 0],
+                duration: 400,
+                easing: 'easeOutQuad'
+            });
+        } else {
+            anime({
+                targets: mobileMenu,
+                opacity: [1, 0],
+                translateY: [0, -20],
+                duration: 300,
+                easing: 'easeInQuad',
+                complete: () => {
+                    mobileMenu.classList.add("hidden");
+                }
+            });
+        }
+        isMenuOpen = !isMenuOpen;
+    });
+
+
 
         // Typing Effect
         const text = "Want to see what I do?";
