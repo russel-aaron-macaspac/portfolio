@@ -17,13 +17,28 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
+    <!-- Add particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
     <style>
         body { font-family: 'Roboto', sans-serif; }
         h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+
+        /* Full-screen background for particles */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
     <!-- Navbar -->
     <header class="relative bg-gray-800 py-4 shadow-md">
@@ -38,7 +53,6 @@
                 <li><a href="more.html" class="hover:text-blue-400">Tech Stack</a></li>
                 <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
                 <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
-                
             </ul>
         </nav>
         <ul id="mobile-menu" class="hidden absolute top-full left-0 w-full z-50 flex flex-col space-y-4 bg-gray-800 text-center p-4 md:hidden">
@@ -47,7 +61,6 @@
             <li><a href="more.html" class="block py-2 hover:text-blue-400">Tech Stack</a></li>
             <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
             <li><a href="contact.html" class="block py-2 hover:text-blue-400">Contact</a></li>
-            
         </ul>
     </header>
 
@@ -62,10 +75,8 @@
         </p>
 
         <p id="description" class="text-lg sm:text-xl mt-4 max-w-2xl text-gray-300 leading-relaxed font-roboto">
-          My ultimate goal is to become a skilled full-stack web developer and eventually specialize in mobile application development. I aim to work on innovative projects that enhance user experiences.
-
+            My ultimate goal is to become a skilled full-stack web developer and eventually specialize in mobile application development. I aim to work on innovative projects that enhance user experiences.
         </p>
-        
     </section>
 
     <!-- Animations using Anime.js -->
@@ -86,36 +97,113 @@
                 opacity: [0, 1],
                 translateY: [-20, 0]
             }, "-=500");
-    
-            const menuToggle = document.querySelector(".menu-toggle");
-            const mobileMenu = document.getElementById("mobile-menu");
-            let isMenuOpen = false;
 
-            menuToggle.addEventListener("click", () => {
-                if (!isMenuOpen) {
-                    mobileMenu.classList.remove("hidden");
-                    anime({
-                        targets: mobileMenu,
-                        opacity: [0, 1],
-                        translateY: [-20, 0],
-                        duration: 400,
-                        easing: 'easeOutQuad'
-                    });
-                } else {
-                    anime({
-                        targets: mobileMenu,
-                        opacity: [1, 0],
-                        translateY: [0, -20],
-                        duration: 300,
-                        easing: 'easeInQuad',
-                        complete: () => {
-                            mobileMenu.classList.add("hidden");
-                        }
-                    });
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+        let isMenuOpen = false;
+
+        menuToggle.addEventListener("click", () => {
+            if (!isMenuOpen) {
+                mobileMenu.classList.remove("hidden");
+                anime({
+                    targets: mobileMenu,
+                    opacity: [0, 1],
+                    translateY: [-20, 0],
+                    duration: 400,
+                    easing: 'easeOutQuad'
+                });
+            } else {
+                anime({
+                    targets: mobileMenu,
+                    opacity: [1, 0],
+                    translateY: [0, -20],
+                    duration: 300,
+                    easing: 'easeInQuad',
+                    complete: () => {
+                        mobileMenu.classList.add("hidden");
+                    }
+                });
+            }
+            isMenuOpen = !isMenuOpen;
+        });
+
+        // Initialize particles.js with a minimalistic effect
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 50,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#ffffff"
+                    }
+                },
+                "opacity": {
+                    "value": 0.3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": false
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "random",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
                 }
-                isMenuOpen = !isMenuOpen;
-            });
-
-            
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                },
+                "modes": {
+                    "repulse": {
+                        "distance": 100
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
     </script>
-    
+
+</body>
+</html>
