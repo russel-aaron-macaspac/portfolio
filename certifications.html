@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certification | Russel Macaspac</title>
+  <meta name="description" content="Explore certifications earned by Russel Macaspac in web development and technology.">
+  <link rel="icon" type="image/png" href="logoo.png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet" />
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons, Animations, Particles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- External Script -->
+  <script src="script.js" defer></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <div id="particles-js"></div>
+
+  <!-- Header -->
+  <header class="relative bg-gray-800 py-4 shadow-md">
+    <nav class="container mx-auto flex justify-between items-center px-6">
+      <h1 class="text-lg font-semibold">Russel Macaspac</h1>
+      <div class="md:hidden menu-toggle cursor-pointer text-2xl">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+        <li><a href="more.html" class="hover:text-blue-400">Tech Stack</a></li>
+        <li><a href="certifications.html" class="text-blue-400 font-semibold">Certification</a></li>
+        <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+    </nav>
+    <ul id="mobile-menu" class="hidden absolute top-full left-0 w-full z-50 flex flex-col space-y-4 bg-gray-800 text-center p-4 md:hidden">
+      <li><a href="index.html" class="block py-2 hover:text-blue-400">Home</a></li>
+      <li><a href="about.html" class="block py-2 hover:text-blue-400">About</a></li>
+      <li><a href="more.html" class="block py-2 hover:text-blue-400">Tech Stack</a></li>
+      <li><a href="certifications.html" class="block py-2 text-blue-400 font-semibold">Certification</a></li>
+      <li><a href="projects.html" class="block py-2 hover:text-blue-400">Projects</a></li>
+      <li><a href="contact.html" class="block py-2 hover:text-blue-400">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-12">
+    <h2 class="text-4xl font-bold mb-6 text-center animated-section">Certifications</h2>
+    <p class="text-center text-gray-300 mb-12 animated-section">Here are some of the certifications I've earned on my learning journey in tech and web development.</p>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 animated-section">
+        <img src="powerpointCert.png" alt="Power Point Certification" class="expandable-img mb-4 rounded-lg shadow-md cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2"> Microsoft PowerPoint Certification</h3>
+        <p class="text-gray-400">Issued by Certiport · 2024</p>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 animated-section">
+        <img src="wordCert.png" alt="Microsoft Word Certification" class="expandable-img mb-4 rounded-lg shadow-md cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Microsoft Word Certification</h3>
+        <p class="text-gray-400">Issued by Certiport · 2024</p>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 animated-section">
+        <img src="databaseCert-1.png" alt="database certification" class="expandable-img mb-4 rounded-lg shadow-md cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Database Certification </h3>
+        <p class="text-gray-400">Issued by Certiport · 2025</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
