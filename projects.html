@@ -23,6 +23,20 @@
             height: 100%;
             z-index: -1;
         }
+
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeInUp {
+          animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+        }
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
@@ -61,18 +75,28 @@
 
     <!-- Projects Section -->
     <section class="container mx-auto flex flex-col items-center text-center py-16 px-6">
-        <h2 class="text-4xl font-bold mb-6">My Projects</h2>
+    <h2 class="text-4xl font-bold mb-6">My Projects</h2>
 
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-full max-w-lg">
+    <div class="flex flex-col items-center w-full space-y-8">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-full max-w-lg animate-fadeInUp">
             <h3 class="text-2xl font-semibold">Portfolio Website</h3>
             <p class="text-gray-400 mt-2">A modern portfolio showcasing my skills and projects.</p>
-            <a href="https://github.com/Russel-Aaron-Macaspac" target="_blank" 
+            <a href="https://github.com/Russel-Aaron-Macaspac/portfolio" target="_blank" 
                class="mt-4 inline-block px-6 py-2 bg-blue-500 rounded-lg text-white hover:bg-blue-600 transition duration-300">
                 <i class="fab fa-github"></i> View on GitHub
             </a>
         </div>
 
-    </section>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-full max-w-lg animate-fadeInUp" style="animation-delay: 0.3s;">
+            <h3 class="text-2xl font-semibold">FolioForge Website</h3>
+            <p class="text-gray-400 mt-2">A portfolio website builder developed with HTML and JavaScript.</p>
+            <a href="https://github.com/russel-aaron-macaspac/ITPM-Project" target="_blank" 
+               class="mt-4 inline-block px-6 py-2 bg-blue-500 rounded-lg text-white hover:bg-blue-600 transition duration-300">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>
