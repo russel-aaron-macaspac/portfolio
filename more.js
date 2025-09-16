@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 anime({
-                    targets: ".icon-animate i",
+                    targets: ".icon-animate i, .icon-animate img",
                     scale: [0.8, 1],
                     opacity: [0, 1],
                     delay: anime.stagger(100),
