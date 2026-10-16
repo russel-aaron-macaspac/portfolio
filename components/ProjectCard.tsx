@@ -1,0 +1,7 @@
+import Link from "next/link";
+import { ArrowUpRight, Github } from "lucide-react";
+import type { Project } from "@/lib/data";
+
+export function ProjectCard({ project }: { project: Project }) {
+  return <article className="card group flex h-full flex-col p-6 transition duration-300 hover:-translate-y-1 hover:border-electric/50 hover:shadow-glow"><div className="mb-8 flex items-center justify-between"><span className="eyebrow">{project.eyebrow}</span><span className="rounded-full border border-line px-3 py-1 text-xs text-slate-400">{project.status}</span></div><h3 className="font-display text-2xl font-semibold">{project.title}</h3><p className="muted mt-3">{project.description}</p><div className="mt-5 flex flex-wrap gap-2">{project.technologies.map((technology) => <span key={technology} className="rounded-md bg-white/[.06] px-2.5 py-1 text-xs text-slate-300">{technology}</span>)}</div><div className="mt-auto flex gap-4 pt-8 text-sm"><Link href={`/projects/${project.slug}`} className="focus-ring inline-flex items-center gap-1 font-medium text-white hover:text-electric">View details <ArrowUpRight size={16} /></Link><Link href={project.github} target="_blank" rel="noreferrer" className="focus-ring inline-flex items-center gap-1 text-slate-400 hover:text-white"><Github size={16} /> GitHub</Link></div></article>;
+}

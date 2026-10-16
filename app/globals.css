@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: #080b12; color: #f8fafc; }
+::selection { background: rgba(79, 140, 255, .35); }
+@layer components {
+  .container-wide { @apply mx-auto w-full max-w-6xl px-6 lg:px-8; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.22em] text-electric; }
+  .section-title { @apply mt-3 font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl; }
+  .muted { @apply leading-7 text-slate-400; }
+  .card { @apply rounded-2xl border border-line bg-panel/70; }
+  .focus-ring { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 focus-visible:ring-offset-ink; }
+}
