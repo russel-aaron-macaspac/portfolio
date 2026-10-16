@@ -9,6 +9,7 @@ export type Project = {
   image?: string;
   objectives: string[];
   contribution: string;
+  role: string;
   status: string;
 };
 
@@ -22,17 +23,43 @@ export const projects: Project[] = [
     github: "https://github.com/Russel-Aaron-Macaspac/portfolio",
     objectives: ["Present my technical skills and selected work in one place.", "Create an accessible way to learn about my background."],
     contribution: "Designed and built the original portfolio website and its responsive pages.",
+    role: "Developer",
     status: "Active",
   },
   {
-    slug: "folioforge-website",
-    title: "FolioForge Website",
-    eyebrow: "ITPM project",
-    description: "A portfolio website builder developed with HTML and JavaScript.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/russel-aaron-macaspac/ITPM-Project",
-    objectives: ["Build a portfolio website builder using core web technologies."],
-    contribution: "Contributed to the website builder project as part of the ITPM project.",
+    slug: "smart-clearance-faculty-system",
+    title: "Smart Clearance Faculty System",
+    eyebrow: "Academic project",
+    description: "A smart faculty clearance system for managing clearance requirements and processes.",
+    technologies: ["Web technologies"],
+    github: "https://github.com/art-nymrah-tiamzon/smart-clearance-front-end-copy",
+    objectives: ["Support a more organized faculty clearance process through a dedicated system."],
+    contribution: "Analyzed the system requirements and helped translate the project needs into a workable solution.",
+    role: "System Analyst",
+    status: "Completed",
+  },
+  {
+    slug: "ai-assisted-faculty-Scheduling",
+    title: "AI-assisted Faculty Scheduling and Requirements Management System",
+    eyebrow: "Academic project",
+    description: "An AI-assisted system for managing faculty Schedules and requirements.",
+    technologies: ["Web technologies", "AI-assisted workflows"],
+    github: "https://github.com/russel-aaron-macaspac/ai-faculty-management-web",
+    objectives: ["Organize faculty scheduling and requirements management in a centralized web application."],
+    contribution: "Built and refined the user-facing interface for the faculty management web application.",
+    role: "Frontend Developer",
+    status: "Completed",
+  },
+  {
+    slug: "rfid-room-scanner",
+    title: "RFID Room Scanner",
+    eyebrow: "IoT project",
+    description: "An RFID-based room scanning project developed as part of an IoT repository.",
+    technologies: ["RFID", "IoT"],
+    github: "http://github.com/lee-joshua-reyes/SDCA_BSIT3B_G11_IoT-Repository",
+    objectives: ["Explore RFID technology for room scanning and IoT project development."],
+    contribution: "Contributed to the development of the RFID room scanner project.",
+    role: "Developer",
     status: "Completed",
   },
 ];
