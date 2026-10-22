@@ -87,6 +87,21 @@ export const skills = [
   { name: "Postman", group: "Tools and Environment", color: "text-orange-300", description: "API development and testing tool." },
 ];
 
+export const achievements = [
+  {
+    title: "Scholarship",
+    details: ["Recipient of the prestigious Development Bank of the Philippines (DBP) Academic Scholarship"],
+  },
+  {
+    title: "Dean's Lister",
+    details: [
+      "Academic Year 2023-2024 · First Semester",
+      "Academic Year 2024-2025 · Second Semester",
+      "Academic Year 2025-2026 · First Semester",
+    ],
+  },
+];
+
 export const certifications = [
   { title: "Microsoft PowerPoint Certification", provider: "Certiport", year: "2024", image: "/assets/powerpointCert.png", verificationUrl: "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=421&cvid=+AzOPx8z3uc5aPuRIqjUlg==" },
   { title: "Microsoft Word Certification", provider: "Certiport", year: "2024", image: "/assets/wordCert.png", verificationUrl: "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=418&cvid=opDw1BMLsdxrXlr5De2dkg==" },

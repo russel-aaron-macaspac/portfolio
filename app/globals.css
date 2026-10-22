@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 :root { color-scheme: dark; }
+:root.light { color-scheme: light; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
 body { background: #080b12; color: #f8fafc; }
+:root.light body { background: #f8fafc; color: #0f172a; }
 ::selection { background: rgba(79, 140, 255, .35); }
 @keyframes route-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes float-slow { 0%, 100% { transform: translate3d(0, 0, 0); } 50% { transform: translate3d(0, -10px, 0); } }
@@ -28,6 +30,23 @@ body { background: #080b12; color: #f8fafc; }
   .focus-ring { @apply transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 focus-visible:ring-offset-ink; }
   .motion-control { @apply transition duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 active:scale-[.98]; }
 }
+:root.light .bg-ink, :root.light .bg-ink\/85 { background-color: rgba(248, 250, 252, .9); }
+:root.light .bg-panel\/70 { background-color: rgba(255, 255, 255, .8); }
+:root.light .bg-slate-900 { background-color: #e2e8f0; }
+:root.light .bg-slate-950 { background-color: #ffffff; }
+:root.light .border-line, :root.light .border-line\/50, :root.light .border-line\/70 { border-color: #cbd5e1; }
+:root.light .text-white { color: #0f172a; }
+:root.light .text-slate-300 { color: #334155; }
+:root.light .text-slate-400 { color: #475569; }
+:root.light .text-slate-500 { color: #64748b; }
+:root.light .text-slate-600 { color: #64748b; }
+:root.light .text-slate-700 { color: #475569; }
+:root.light .text-slate-800 { color: #334155; }
+:root.light .text-slate-900 { color: #0f172a; }
+:root.light .hover\:text-white:hover { color: #0f172a; }
+:root.light .focus-ring { --tw-ring-offset-color: #f8fafc; }
+:root.light input.bg-slate-950, :root.light textarea.bg-slate-950 { color: #0f172a; }
+:root.light input.bg-slate-950::placeholder, :root.light textarea.bg-slate-950::placeholder { color: #64748b; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
