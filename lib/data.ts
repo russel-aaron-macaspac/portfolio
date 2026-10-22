@@ -90,3 +90,29 @@ export const certifications = [
   { title: "Cybersecurity Certification", provider: "Certiport", year: "2026", image: "/assets/Cybersecurity_cert.png", verificationUrl: "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=494&cvid=a3c1fvd2HWDQ86KSxIrvgA==" },
   { title: "HTML and CSS Certification", provider: "Certiport", year: "2026", image: "/assets/HTMLCSS_cert.png", verificationUrl: "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=468&cvid=lggzbEh/r9vxj/NetupQCw==" },
 ];
+
+export const courses = [
+  {
+    title: "Introduction to Cybersecurity",
+    provider: "Cisco Networking Academy",
+    year: "2025",
+    description: "Fundamentals of cybersecurity and online safety.",
+    image: "/assets/cisco_cybersecurity.png",
+  },
+
+  {
+    title: "Introduction to IoT and Digital Transformation",
+    provider: "Cisco Networking Academy",
+    year: "2026",
+    description: "Learned how IoT is digitally transforming the world.",
+    image: "/assets/cisco_iot.png",
+  },
+
+   {
+    title: "Getting Started with Cisco Packet Tracer",
+    provider: "Cisco Networking Academy",
+    year: "2026",
+    description: "Familiarized with the Packet Tracer simulation environment.",
+    image: "/assets/cisco_packetTracer.png",
+  },
+];
