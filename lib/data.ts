@@ -65,22 +65,26 @@ export const projects: Project[] = [
 ];
 
 export const skills = [
-  { name: "JavaScript", group: "Programming languages", color: "text-yellow-300", description: "Interactive web experiences and application logic." },
-  { name: "C", group: "Programming languages", color: "text-blue-300", description: "Foundational programming and problem solving." },
-  { name: "Java", group: "Programming languages", color: "text-red-300", description: "Object-oriented application development." },
-  { name: "Dart", group: "Programming languages", color: "text-cyan-300", description: "Language used with Flutter projects." },
+  { name: "JavaScript", group: "Languages", color: "text-yellow-300", description: "Interactive web experiences and application logic." },
+  { name: "TypeScript", group: "Languages", color: "text-blue-300", description: "Typed JavaScript for reliable application development." },
+  { name: "C", group: "Languages", color: "text-blue-300", description: "Foundational programming and problem solving." },
+  { name: "Java", group: "Languages", color: "text-red-300", description: "Object-oriented application development." },
+  { name: "Dart", group: "Languages", color: "text-cyan-300", description: "Language used with Flutter projects." },
   { name: "HTML", group: "Web technologies", color: "text-orange-300", description: "Semantic structure for the web." },
   { name: "CSS", group: "Web technologies", color: "text-sky-300", description: "Responsive layouts and visual styling." },
   { name: "Oracle", group: "Databases", color: "text-red-300", description: "Relational database technology." },
   { name: "MongoDB", group: "Databases", color: "text-emerald-300", description: "Document-oriented database technology." },
-  { name: "GitHub", group: "Tools & frameworks", color: "text-white", description: "Source control and project collaboration." },
-  { name: "Visual Studio Code", group: "Tools & frameworks", color: "text-blue-300", description: "Primary code editor." },
-  { name: "Android Studio", group: "Tools & frameworks", color: "text-green-300", description: "Android development environment." },
-  { name: "Flutter", group: "Tools & frameworks", color: "text-cyan-300", description: "Cross-platform app development framework." },
-  { name: "Firebase", group: "Tools & frameworks", color: "text-amber-300", description: "Backend and app platform." },
-  { name: "Node.js", group: "Tools & frameworks", color: "text-lime-300", description: "JavaScript runtime for server-side development." },
-  { name: "Express.js", group: "Tools & frameworks", color: "text-slate-200", description: "Web framework for Node.js." },
-  { name: "Postman", group: "Tools & frameworks", color: "text-orange-300", description: "API development and testing tool." },
+  { name: "Supabase", group: "Databases", color: "text-emerald-300", description: "Backend platform with a PostgreSQL database." },
+  { name: "React", group: "Frameworks and runtimes", color: "text-cyan-300", description: "Library for building component-based user interfaces." },
+  { name: "Next.js", group: "Frameworks and runtimes", color: "text-white", description: "React framework for full-stack web applications." },
+  { name: "Flutter", group: "Frameworks and runtimes", color: "text-cyan-300", description: "Cross-platform app development framework." },
+  { name: "Firebase", group: "Frameworks and runtimes", color: "text-amber-300", description: "Backend and app platform." },
+  { name: "Node.js", group: "Frameworks and runtimes", color: "text-lime-300", description: "JavaScript runtime for server-side development." },
+  { name: "Express.js", group: "Frameworks and runtimes", color: "text-slate-200", description: "Web framework for Node.js." },
+  { name: "GitHub", group: "Tools and Environment", color: "text-white", description: "Source control and project collaboration." },
+  { name: "Visual Studio Code", group: "Tools and Environment", color: "text-blue-300", description: "Primary code editor." },
+  { name: "Android Studio", group: "Tools and Environment", color: "text-green-300", description: "Android development environment." },
+  { name: "Postman", group: "Tools and Environment", color: "text-orange-300", description: "API development and testing tool." },
 ];
 
 export const certifications = [
