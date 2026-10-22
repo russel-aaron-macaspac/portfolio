@@ -84,7 +84,9 @@ export const skills = [
 ];
 
 export const certifications = [
-  { title: "Microsoft PowerPoint Certification", provider: "Certiport", year: "2024", image: "/assets/powerpointCert.png" },
-  { title: "Microsoft Word Certification", provider: "Certiport", year: "2024", image: "/assets/wordCert.png" },
-  { title: "Database Certification", provider: "Certiport", year: "2025", image: "/assets/databaseCert-1.png" },
+  { title: "Microsoft PowerPoint Certification", provider: "Certiport", year: "2024", image: "/assets/powerpointCert.png", verificationUrl: "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=421&cvid=+AzOPx8z3uc5aPuRIqjUlg==" },
+  { title: "Microsoft Word Certification", provider: "Certiport", year: "2024", image: "/assets/wordCert.png", verificationUrl: "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=418&cvid=opDw1BMLsdxrXlr5De2dkg==" },
+  { title: "Database Certification", provider: "Certiport", year: "2025", image: "/assets/databaseCert-1.png", verificationUrl: "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=467&cvid=I3f2N2A7hPOw0R3jZRf6sQ==" },
+  { title: "Cybersecurity Certification", provider: "Certiport", year: "2026", image: "/assets/Cybersecurity_cert.png", verificationUrl: "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=494&cvid=a3c1fvd2HWDQ86KSxIrvgA==" },
+  { title: "HTML and CSS Certification", provider: "Certiport", year: "2026", image: "/assets/HTMLCSS_cert.png", verificationUrl: "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=468&cvid=lggzbEh/r9vxj/NetupQCw==" },
 ];
