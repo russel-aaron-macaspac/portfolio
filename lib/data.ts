@@ -6,7 +6,7 @@ export type Project = {
   technologies: string[];
   github: string;
   live?: string;
-  image?: string;
+  images?: string[];
   objectives: string[];
   contribution: string;
   role: string;
@@ -17,50 +17,82 @@ export const projects: Project[] = [
   {
     slug: "portfolio-website",
     title: "Portfolio Website",
-    eyebrow: "Personal project",
+    eyebrow: "Third Year Academic & Personal project",
     description: "A modern portfolio showcasing my skills and projects.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["Node.js", "React", "TypeScript", "Next.js", "Tailwind CSS"],
     github: "https://github.com/Russel-Aaron-Macaspac/portfolio",
     objectives: ["Present my technical skills and selected work in one place.", "Create an accessible way to learn about my background."],
     contribution: "Designed and built the original portfolio website and its responsive pages.",
     role: "Developer",
     status: "Active",
+    images: [
+      "/assets/port1.png",
+      "/assets/port2.png",
+      
+    ],
+
   },
   {
     slug: "smart-clearance-faculty-system",
     title: "Smart Clearance Faculty System",
-    eyebrow: "Academic project",
+    eyebrow: "Third Year Academic project",
     description: "A smart faculty clearance system for managing clearance requirements and processes.",
-    technologies: ["Web technologies"],
+    technologies: ["Web technologies", "AI-Assisted Workflows", "OCR Scanner","Flutter", "Dart", "MongoDB"],
     github: "https://github.com/art-nymrah-tiamzon/smart-clearance-front-end-copy",
     objectives: ["Support a more organized faculty clearance process through a dedicated system."],
     contribution: "Analyzed the system requirements and helped translate the project needs into a workable solution.",
     role: "System Analyst",
     status: "Completed",
+    images: [
+      "/assets/fac-clearance1.png",
+      "/assets/fac-clearance2.png",
+      "/assets/fac-clearance3.png",
+      "/assets/fac-clearance4.png",
+      "/assets/fac-clearance5.png",
+      "/assets/fac-clearance6.png",
+      
+    ],
   },
   {
     slug: "ai-assisted-faculty-Scheduling",
     title: "AI-assisted Faculty Scheduling and Requirements Management System",
-    eyebrow: "Academic project",
+    eyebrow: "Capstone project",
     description: "An AI-assisted system for managing faculty Schedules and requirements.",
-    technologies: ["Web technologies", "AI-assisted workflows"],
+    technologies: ["Web technologies", "AI-assisted workflows", "React", "Next.js", "TypeScript", "Tailwind CSS", "Supabase", "JavaScript"],
     github: "https://github.com/russel-aaron-macaspac/ai-faculty-management-web",
     objectives: ["Organize faculty scheduling and requirements management in a centralized web application."],
     contribution: "Built and refined the user-facing interface for the faculty management web application.",
     role: "Frontend Developer",
-    status: "Completed",
+    status: "Ongoing",
+    images: [
+      "/assets/domstax1.png",
+      "/assets/domstax2.png",
+      "/assets/domstax3.png",
+      "/assets/domstax4.png",
+      "/assets/domstax5.png",
+      "/assets/domstax6.png",
+      
+    ],
+
   },
   {
     slug: "rfid-room-scanner",
     title: "RFID Room Scanner",
     eyebrow: "IoT project",
     description: "An RFID-based room scanning project developed as part of an IoT repository.",
-    technologies: ["RFID", "IoT"],
+    technologies: ["RFID", "IoT", "Arduino", "C", "JavaScript"],
     github: "http://github.com/lee-joshua-reyes/SDCA_BSIT3B_G11_IoT-Repository",
     objectives: ["Explore RFID technology for room scanning and IoT project development."],
     contribution: "Contributed to the development of the RFID room scanner project.",
     role: "Developer",
     status: "Completed",
+    images: [
+      "/assets/IOT.png",
+      "/assets/IOT2.png",
+      "/assets/IOT3.jpg",
+      "/assets/IOT4.png",
+      
+    ],
   },
 ];
 
