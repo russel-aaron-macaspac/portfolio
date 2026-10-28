@@ -6,10 +6,67 @@
 :root.light { color-scheme: light; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
-body { background: #080b12; color: #f8fafc; }
-:root.light body { background: #f8fafc; color: #0f172a; }
+body { position: relative; isolation: isolate; overflow-x: hidden; background: radial-gradient(ellipse at 50% 25%, #11162d 0%, #080a18 42%, #03040a 100%); color: #f8fafc; }
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: -20%;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(ellipse at 18% 20%, rgba(79, 140, 255, .13), transparent 28%),
+    radial-gradient(ellipse at 82% 16%, rgba(139, 92, 246, .13), transparent 26%),
+    radial-gradient(ellipse at 65% 78%, rgba(34, 211, 238, .07), transparent 30%),
+    linear-gradient(135deg, #050711 0%, #0a0b1c 48%, #080b12 100%);
+  filter: blur(30px);
+  animation: background-drift 28s ease-in-out infinite alternate;
+  transform: translate3d(0, 0, 0);
+}
+body::after {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  opacity: .3;
+  background-image:
+    radial-gradient(circle, rgba(226, 238, 255, .85) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(148, 191, 255, .75) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(196, 181, 253, .65) 0 1px, transparent 1.5px),
+    linear-gradient(118deg, transparent 0 49.7%, rgba(148, 191, 255, .07) 50%, transparent 50.3%);
+  background-position: 8% 18%, 72% 64%, 42% 88%, 0 0;
+  background-size: 170px 190px, 230px 250px, 310px 280px, 100% 100%;
+  animation: particle-drift 36s linear infinite;
+  mix-blend-mode: screen;
+}
+:root.light body {
+  background:
+    radial-gradient(ellipse at 50% 25%, #ffffff 0%, #f4f7ff 45%, #edf2fb 100%);
+  color: #0f172a;
+}
+:root.light body::before {
+  background:
+    radial-gradient(ellipse at 18% 22%, rgba(79, 140, 255, .14), transparent 30%),
+    radial-gradient(ellipse at 82% 18%, rgba(139, 92, 246, .12), transparent 28%),
+    radial-gradient(ellipse at 68% 78%, rgba(34, 211, 238, .09), transparent 32%);
+}
+:root.light body::after {
+  opacity: .12;
+  mix-blend-mode: multiply;
+}
 ::selection { background: rgba(79, 140, 255, .35); }
 @keyframes route-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes background-drift {
+  0% { transform: translate3d(-2%, -1%, 0) scale(1); }
+  50% { transform: translate3d(1%, 2%, 0) scale(1.04); }
+  100% { transform: translate3d(2%, -1%, 0) scale(1.02); }
+}
+@keyframes particle-drift {
+  0% { opacity: .22; transform: translate3d(0, 0, 0); }
+  35% { opacity: .34; }
+  70% { opacity: .26; }
+  100% { opacity: .22; transform: translate3d(-60px, -40px, 0); }
+}
 @keyframes float-slow { 0%, 100% { transform: translate3d(0, 0, 0); } 50% { transform: translate3d(0, -10px, 0); } }
 @keyframes pulse-glow { 0%, 100% { opacity: .45; } 50% { opacity: .8; } }
 @keyframes typing { from { max-width: 0; } to { max-width: 100%; } }
@@ -25,6 +82,8 @@ body { background: #080b12; color: #f8fafc; }
 .typing-line { width: fit-content; max-width: 0; overflow: hidden; white-space: nowrap; border-right: 2px solid currentColor; animation: typing 1.7s steps(22, end) forwards, typing-caret .75s step-end infinite; }
 .typing-line-delay { animation-delay: 1.7s, 3.4s; }
 .mobile-menu { animation: route-enter .25s ease-out both; }
+.mobile-nav-link { transition: background-color .25s ease, color .25s ease, transform .25s ease; }
+.mobile-nav-link:active { transform: scale(.98); }
 @layer components {
   .container-wide { @apply mx-auto w-full max-w-6xl px-6 lg:px-8; }
   .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.22em] text-electric; }
@@ -54,6 +113,8 @@ body { background: #080b12; color: #f8fafc; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  body::before { animation: none; }
+  body::after { animation: none; }
   .reveal { opacity: 1; transform: none; }
   .typing-line { max-width: 100%; border-right: 0; animation: none; }
 }
