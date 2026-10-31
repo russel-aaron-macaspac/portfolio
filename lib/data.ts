@@ -156,7 +156,7 @@ export const courses = [
     provider: "Cisco Networking Academy",
     year: "2026",
     description: "Learned how IoT is digitally transforming the world.",
-    image: "/assets/cisco_iot.png",
+    image: "/assets/cisco_IoT.png",
   },
 
    {
